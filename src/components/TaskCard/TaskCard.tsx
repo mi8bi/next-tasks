@@ -22,8 +22,8 @@ const TaskCard = ({ task }: TaskCardProps) => {
                         {task.isCompleted ? 'Completed': 'Incomplete'}
                     </div>
                 <div className="flex gap-4">
-                    <TaskEditButton id={task._id} />
-                    <TaskDeleteButton id={task._id} />
+                    <TaskEditButton id={task._id.toString()} />
+                    <TaskDeleteButton id={task._id.toString()} />
                 </div>
             </div>
         </div>

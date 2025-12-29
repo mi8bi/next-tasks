@@ -1,4 +1,4 @@
-import mongoose, { Document } from "mongoose";
+import mongoose, { Document, Types } from "mongoose";
     
 export interface Task {
     title: string;
@@ -8,7 +8,7 @@ export interface Task {
 }
 
 export interface TaskDocument extends Task, Document {
-    _id: string;
+    _id: Types.ObjectId;
     createdAt: Date;
     updatedAt: Date;
 }

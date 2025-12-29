@@ -1,5 +1,5 @@
 import TaskCard from "@/components/TaskCard/TaskCard";
-import { Task, TaskDocument } from "@/models/task";
+import { TaskDocument } from "@/models/task";
 import Link from "next/link";
 import { MdAddTask } from "react-icons/md";
 
@@ -29,7 +29,7 @@ export default async function MainPage() {
       </header>
       <div className="mt-8 flex flex-wrap gap-4">
         {allTasks.map((task) => (
-          <TaskCard key={task._id} task={task} />
+          <TaskCard key={task._id.toString()} task={task} />
         ))}
       </div>
     </div>
